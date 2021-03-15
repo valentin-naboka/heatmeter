@@ -1,12 +1,10 @@
 package mbus
 
 /*
+#cgo LDFLAGS: -L../build/mbus/.libs/ -lmbus
+#cgo CFLAGS:  -I../build
 
-//#cgo LDFLAGS: -L/Users/valentin/dev/3rd_party/libmbus/mbus/.libs/ -lmbus1
-#cgo LDFLAGS:  /usr/local/lib/libmbus.a
-
-#include "/Users/valentin/dev/3rd_party/libmbus/mbus/mbus-protocol-aux.h"
-#include "/Users/valentin/dev/3rd_party/libmbus/mbus/mbus-serial.h"
+#include "mbus/mbus-serial.h"
 
 // Workaround to explicitly convert void* to mbus_frame*,
 // since Go can't convert unsafe.Pointer to concrete type C.mbus_frame
