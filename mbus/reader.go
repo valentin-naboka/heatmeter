@@ -1,7 +1,7 @@
 package mbus
 
 /*
-#cgo LDFLAGS: -L../build/mbus/.libs/ -lmbus
+#cgo LDFLAGS: -L../build/mbus/.libs/ -lmbus -lm
 #cgo CFLAGS:  -I../build
 
 #include "mbus/mbus-serial.h"
