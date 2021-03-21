@@ -1,5 +1,5 @@
 
-#!/bin/sh
+#!/bin/bash
 
 if [ $# -gt 1 ]; then
     echo -e " Usage: $0 [OPTION]\n\n" \
