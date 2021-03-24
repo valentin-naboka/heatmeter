@@ -11,7 +11,7 @@ import (
 
 func main() {
 	var device, mbusIDVar, baudrateVar string
-	if device := os.Getenv("HM_DEVICE"); device == "" {
+	if device = os.Getenv("HM_DEVICE"); device == "" {
 		log.Fatal("HM_DEVICE variable is not set")
 	}
 
@@ -41,5 +41,5 @@ func main() {
 	}
 
 	measurement, _ := reader.ReadData()
-	fmt.Printf("%v\n", measurement)
+	fmt.Printf("%v\n", *measurement)
 }
