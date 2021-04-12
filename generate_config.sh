@@ -27,6 +27,9 @@ DEC_PASS=$(decrypt $PASS)
 read -p "Enter bot api token: " BOT_TOKEN
 DEC_BOT_TOKEN=$(decrypt $BOT_TOKEN)
 
+read -p "Enter telegram chat id: " CHAT_ID
+DEC_CHAT_ID=$(decrypt $CHAT_ID)
+
 echo "package generated
 
 const Data1 string = \`$KEY\`
@@ -35,4 +38,5 @@ const Data2 string = \`$IV\`
 const Data3 string = \`$DEC_HOST\`
 const Data4 string = \`$DEC_EMAIL\`
 const Data5 string = \`$DEC_PASS\`
-const Data6 string = \`$DEC_BOT_TOKEN\`" > $CONFIG_FILE
+const Data6 string = \`$DEC_BOT_TOKEN\`
+const Data7 string = \`$DEC_CHAT_ID\`" > $CONFIG_FILE
