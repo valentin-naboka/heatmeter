@@ -22,7 +22,6 @@ func NewTelegram(token string, chatID int64) (*TelegramLogger, error) {
 	log.Printf("Authorized on account %s", bot.Self.UserName)
 
 	logger := TelegramLogger{bot, chatID}
-	log.SetOutput(&logger)
 	return &logger, nil
 }
 
