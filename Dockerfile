@@ -1,4 +1,4 @@
-FROM golang:1.16.2
+FROM golang:1.16.2 AS buld_heatmeter
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -16,9 +16,12 @@ USER debian
 ARG HOME_DIR="/home/debian"
 WORKDIR ${HOME_DIR}
 
-ADD . heatmeter
+COPY . heatmeter
 RUN sudo chown -R debian:root heatmeter
 
 WORKDIR ${HOME_DIR}/heatmeter
 
-RUN bash build_mbus.sh --arm
+RUN bash build.sh --arm
+
+FROM scratch AS export-stage
+COPY --from=buld_heatmeter /home/debian/heatmeter/heatmeter .
