@@ -149,8 +149,7 @@ func main() {
 
 	submitter := report.NewSubmitter(data3, htmlDumpPathVar)
 	ok := submitter.Execute(data4, data5,
-		//energy,
-		"",
+		energyStr,
 		volumeStr,
 		volumeFlowStr,
 		powerStr,
@@ -160,7 +159,7 @@ func main() {
 		errorHoursStr)
 
 	if ok {
-		log.Printf("Data has been succesfully submited.\n Energy: %s, volume: %s, volume flow: %s, power: %s, flow temperature: %s, return temperature: %s, operating days: %s, error hours: %s",
+		log.Printf("Data has been succesfully submitted.\n Energy: %s, volume: %s, volume flow: %s, power: %s, flow temperature: %s, return temperature: %s, operating days: %s, error hours: %s",
 			energyStr,
 			volumeStr,
 			volumeFlowStr,

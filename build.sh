@@ -16,7 +16,6 @@ fi
 
 pushd ${BUILD_DIR}
 
-SED_CMD=" sed -i"
 if [ $(uname) == "Darwin" ]; then
   sed -i '' 's/^.*\&\& \.\/configure$/& --enable-shared=no/' build.sh
   

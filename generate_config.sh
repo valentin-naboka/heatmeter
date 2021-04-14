@@ -16,7 +16,6 @@ decrypt(){
 
 read -p "Enter host: " HOST
 DEC_HOST=$(decrypt $HOST)
-printf $DEC_HOST
 
 read -p "Enter email: " EMAIL
 DEC_EMAIL=$(decrypt $EMAIL)
@@ -30,6 +29,7 @@ DEC_BOT_TOKEN=$(decrypt $BOT_TOKEN)
 read -p "Enter telegram chat id: " CHAT_ID
 DEC_CHAT_ID=$(decrypt $CHAT_ID)
 
+mkdir -p generated
 echo "package generated
 
 const Data1 string = \`$KEY\`
