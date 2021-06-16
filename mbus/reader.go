@@ -45,7 +45,7 @@ func (r *Reader) Open(device string, primaryAddress uint8, baudrate uint16) erro
 
 	r.address = C.int(primaryAddress)
 	if C.mbus_send_ping_frame(r.handle, r.address, 1) != 0 {
-		return fmt.Errorf("failed to deselect address: %d", primaryAddress)
+		return fmt.Errorf("failed to setup handshake for address: %d", primaryAddress)
 	}
 	return nil
 }
