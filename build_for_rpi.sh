@@ -19,8 +19,8 @@ read -p "Enter badurate: " HM_BAUDRATE
 pushd out
 echo "[Unit]
 Description=Heatmeter report submitter
-Requires=network-online.target
-Requires=time-sync.target
+After=network-online.target
+After=time-sync.target
 
 [Install]
 WantedBy=multi-user.target
