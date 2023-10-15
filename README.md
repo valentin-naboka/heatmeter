@@ -3,7 +3,7 @@
 The heatmeter is an automated tool to get a measurement from [Sharky 774](https://www.diehl.com/metering/en/portfolio/thermal-energy-metering-/thermal-energy-metering-product/sharky-774-compact/238298/) and submit data to [utilities of heating networks](https://www.hts.kharkov.ua/). It relies on M-Bus protocol to get a measurement from the heatmeter via MBus to USB converter.
 
 Basically, it is designed to work in tandem with Raspberry Pi, but also can be used with an arbitrary operating system and chips that has the support of [Golang](https://golang.org/).
-The tool consist of two parts:
+The tool consists of two parts:
 1. M-Bus reader.
 2. Data submitter.
 
